@@ -9,9 +9,24 @@
 
 // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
 
+const input = document.querySelector('#controls > input');
+const btnCreate = document.querySelector('[data-create]');
+const btnDestroy = document.querySelector('[data-destroy]');
+const divColection = document.querySelector('#boxes');
+const divColorClass = document.querySelector('.color');
+
+btnCreate.addEventListener('click', createColection);
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
+const markup = `<div class='color'></div>`;
+
+function createColection() {
+  const color = getRandomHexColor();
+  divColection.insertAdjacentHTML('afterbegin', markup);
+  
+}
+console.log(divColorClass)

@@ -8,7 +8,7 @@ console.log(`Number of categories: ${liItemAll.length}`)
 
 liItemAll.forEach(e => {
     console.log(`Category: ${e.firstElementChild.textContent}`)
-    console.log(`Elements: ${e.lastElementChild.querySelectorAll('li').length}`)
+    console.log(`Elements: ${e.lastElementChild.children.length}`)
 });
 
 

@@ -7,6 +7,8 @@ const textValue = document.querySelector('#text');
 
 inputControl.addEventListener('input', fontSizeText);
 
+textValue.style.fontSize = inputControl.value + 'px';
+
 function fontSizeText() {
     textValue.style.fontSize = inputControl.value + 'px';
 };

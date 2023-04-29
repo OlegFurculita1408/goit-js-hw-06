@@ -7,7 +7,7 @@ const dataLength = +input.dataset.length;
 input.addEventListener('blur', addClassEvent);
 
 function addClassEvent() {
-    if (input.value.length === dataLength) {
+    if (input.value.length === dataLength && input.value.length !== '') {
         input.classList.remove('invalid');
         input.classList.add('valid');
     }
@@ -16,3 +16,4 @@ function addClassEvent() {
         input.classList.add('invalid');
     }
 };
+

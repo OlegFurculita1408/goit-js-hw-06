@@ -13,11 +13,11 @@ const ingredients = [
   'Condiments',
 ];
 
-const ul = document.querySelector('#ingredients');
-
-const liIngredient = ingredients.map((ing) => {
-    let li = document.createElement('li')
-    li.classList.add('item');
-    li.textContent = ing;
-    ul.appendChild(li)
-});
+const markup = ingredients.map((ing) => {
+  const addliIngredient = document.createElement('li');
+  addliIngredient.classList.add("item");
+  addliIngredient.textContent = ing;
+  return addliIngredient;
+})
+const ul = document.querySelector('ul');
+ul.append(...markup);
